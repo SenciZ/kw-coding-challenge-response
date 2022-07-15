@@ -1,0 +1,28 @@
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .example-image {
+    width: 100%;
+    height: auto;
+    border: solid 1px black;
+    border-radius: 20px;
+  
+    @media (min-width: 768px) {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+
+  ol {
+    text-align: left;
+
+    li {
+      margin-bottom: 20px;
+    }
+  }
+}
