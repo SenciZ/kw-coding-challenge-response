@@ -33,6 +33,7 @@
                 button{
                     background-color: white;
                     border: none;
+                    font-weight: 900;
                 }
             }
 
@@ -45,10 +46,10 @@
             }
 
             .inactive{
-                border: rgb(187, 187, 187) 1px solid;
+                border: #cccccc 1px solid;
                 border-bottom: 1px rgb(0, 0, 0) solid;
                 button{
-                    color: rgb(149, 149, 149);
+                    color: #cccccc;
                 }
             }
          }
@@ -84,6 +85,10 @@
                 margin-left: 1rem;
                 transform: scale(.5);
             }
+        }
+
+        tr:hover{
+            background-color: #f3f3f3;
         }
     }
 }
