@@ -32,11 +32,11 @@
                 cursor: pointer;
 
                 button{
+                    display: flex;
                     background-color: white;
                     border: none;
                     font-weight: 900;
                     cursor: pointer;
-
                 }
             }
 
@@ -84,7 +84,7 @@
             }
 
             .forwardArrow{
-                color: #d3d3d3;
+                color: #343434;
                 margin-left: 1rem;
                 transform: scale(.5);
             }
