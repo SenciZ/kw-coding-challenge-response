@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./styles.scss";
 import { oneMonth, oneYear } from "./data";
 import { yearCompanyItems, monthCompanyItems } from "./dataFunctions";
+import TabButton from "./TabButton";
 
 export const LowerImpactPurchases = () => {
   //If yearActive state is false then the oneMonth list will be rendered
@@ -23,26 +24,16 @@ export const LowerImpactPurchases = () => {
       </p>
       <div className="tabContainer">
         <ul>
-          <li className={tabActive === "30Days" ? "active" : "inactive"}>
-            <button
-              onClick={() => {
-                setYearActive(false);
-                setTabActive("30Days");
-              }}
-            >
-              Last 30 Days
-            </button>
-          </li>
-          <li className={tabActive === "12Months" ? "active" : "inactive"}>
-            <button
-              onClick={() => {
-                setYearActive(true);
-                setTabActive("12Months");
-              }}
-            >
-              Last 12 Months
-            </button>
-          </li>
+          <TabButton
+            className={tabActive === props.tabName ? "active" : "inactive"}
+            tabName="Last 30 Days"
+            setYearActive={setYearActive}
+          />
+          <TabButton
+            className={tabActive === props.tabName ? "active" : "inactive"}
+            tabName="Last 12 Months"
+            setYearActive={setYearActive}
+          />
         </ul>
       </div>
       <table>
