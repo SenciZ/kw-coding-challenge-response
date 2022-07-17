@@ -33,7 +33,7 @@ export const LowerImpactPurchases = () => {
               Last 30 Days
             </button>
           </li>
-          <li className={tabActive !== "30Days" ? "active" : "inactive"}>
+          <li className={tabActive === "12Months" ? "active" : "inactive"}>
             <button
               onClick={() => {
                 setYearActive(true);
