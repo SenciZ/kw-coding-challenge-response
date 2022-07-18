@@ -3,8 +3,6 @@ export const oneMonth = [
     _id: "621b99b75f87e75f5365f111",
     totalSpent: 327.94,
     company: {
-      _id: "621b99b75f87e75f5365f111",
-
       companyName: "Harris Teeter",
       rating: "neutral",
       url: "https://www.harristeeter.com/",
@@ -14,7 +12,6 @@ export const oneMonth = [
     _id: "621b993b5f87e75f5365a8a1",
     totalSpent: 70,
     company: {
-      _id: "621b993b5f87e75f5365a8a1",
       companyName: "T-Mobile US",
       rating: "neutral",
       url: "https://www.t-mobile.com",

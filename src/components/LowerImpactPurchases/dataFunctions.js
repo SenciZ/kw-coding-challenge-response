@@ -13,7 +13,7 @@ export function monthCompanyItems() {
     const { url, companyName, rating, _id } = item.company;
     const { totalSpent } = item;
     return (
-      <tr key={_id} onClick={() => navigateToWebsite(url)}>
+      <tr key={_id || item._id} onClick={() => navigateToWebsite(url)}>
         <td>
           <img
             src={`${iconPath}emoji-${rating}.svg`}
