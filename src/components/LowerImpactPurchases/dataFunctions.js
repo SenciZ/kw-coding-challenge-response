@@ -10,17 +10,19 @@ function navigateToWebsite(url) {
 //Returns a <tr> element for each item in the oneMonth list
 export function monthCompanyItems() {
   return oneMonth.map((item) => {
+    const { url, companyName, rating, _id } = item.company;
+    const { totalSpent } = item;
     return (
-      <tr key={item._id} onClick={() => navigateToWebsite(item.company.url)}>
+      <tr key={_id} onClick={() => navigateToWebsite(url)}>
         <td>
           <img
-            src={`${iconPath}emoji-${item.company.rating}.svg`}
-            alt={`${item.company.rating} emoji icon`}
+            src={`${iconPath}emoji-${rating}.svg`}
+            alt={`${rating} emoji icon`}
           />
-          {item.company.companyName}
+          {companyName}
         </td>
         <td>
-          ${item.totalSpent.toFixed(2)}{" "}
+          ${totalSpent.toFixed(2)}{" "}
           <span className="material-symbols-outlined forwardArrow">
             arrow_forward_ios
           </span>
@@ -33,17 +35,21 @@ export function monthCompanyItems() {
 //Returns a <tr> element for each item in the oneYear list
 export function yearCompanyItems() {
   return oneYear.map((item) => {
+    //Destructure item company object
+    const { url, companyName, rating, _id } = item.company;
+    const { totalSpent } = item;
+
     return (
-      <tr key={item._id} onClick={() => navigateToWebsite(item.company.url)}>
+      <tr key={_id} onClick={() => navigateToWebsite(url)}>
         <td>
           <img
-            src={`${iconPath}emoji-${item.company.rating}.svg`}
-            alt={`${item.company.rating} emoji icon`}
+            src={`${iconPath}emoji-${rating}.svg`}
+            alt={`${rating} emoji icon`}
           />
-          {item.company.companyName}
+          {companyName}
         </td>
         <td>
-          ${item.totalSpent.toFixed(2)}{" "}
+          ${totalSpent.toFixed(2)}{" "}
           <span className="material-symbols-outlined forwardArrow">
             arrow_forward_ios
           </span>
